@@ -55,7 +55,7 @@ export const updateStudent = async (req, res) => {
         let student;
         student = await Student.findById(paramsId);
         if (!student) {
-            return res.status(404).send("Cannot find studend");
+            return res.status(404).send("Cannot find student");
         } else {
             if (!req.file) {
                 const result = await student.save();
