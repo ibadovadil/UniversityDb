@@ -1,0 +1,22 @@
+meta {
+  name: Get All
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3001/student
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Adil2",
+      "surname": "Ibadov2",
+      "age": 212,
+      "university": "673c732596ede64aea427831",
+      "faculty": "673c745031d13e4136f9a9da"
+  }
+  
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Update University
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3001/university/67549ac040403f8906cf5fcd
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Azmiu",
+    "address": "Ayna Sultanova 101"
+  }
+}
+
+body:multipart-form {
+  name: sass
+  address: sass
+  images: @file(C:\Users\adili\Desktop\imgs\360_F_271056073_C0tbpNLFbcGurqxoMXqPBrx8vzL9VLVY.jpg)
+  coverImg: @file(C:\Users\adili\Desktop\imgs\360_F_271056073_C0tbpNLFbcGurqxoMXqPBrx8vzL9VLVY.jpg)
+}

@@ -1,0 +1,31 @@
+meta {
+  name: Update Student
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3001/student/67548cc5e32d1ea8698dd8fb
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Adil",
+    "surname": "Ibadov",
+    "age": 21,
+    "faculty":"675486f38bebe9e8c587145d",
+    "university":"675486c78bebe9e8c5871458"
+  
+  }
+}
+
+body:multipart-form {
+  name: salam
+  surname: 111222111
+  avatar: @file(C:\Users\adili\Desktop\imgs\images.jfif)
+  age: 19
+  university: 675486d28bebe9e8c587145a
+  faculty: 675486f38bebe9e8c587145d
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3001/university
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Azmiu",
+    "address":"Ayna Sultanova 101"
+  }
+}
+
+body:multipart-form {
+  name: UNEC
+  address: Azerbaijan
+  coverImg: @file(C:\Users\adili\Desktop\imgs\images.jfif)
+  images: @file(C:\Users\adili\Desktop\imgs\Furniture-pieces-that-blur-the-line-between-modern-traditional.jpg)
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Create faculty
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3001/faculty
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Riyaziyyat",
+    "universities":["675486c78bebe9e8c5871458"]
+  }
+}
+
+body:multipart-form {
+  name: aassaasassaas
+  students: 
+  universities: 6749a32d5cfabf0ec9012355
+}

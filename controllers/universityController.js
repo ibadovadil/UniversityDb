@@ -1,6 +1,6 @@
 import { University, universityValidation } from '../models/UniersityModel.js';
 import { deleteManyOldImage, deleteSingleOldImage } from "../utils/deleteOldImage.js";
-
+import jwt from "jsonwebtoken";
 export const GetUniveristy = async (req, res) => {
     const university = await University.find().populate('faculties', 'name -_id').populate({
         path: "students",
@@ -10,7 +10,8 @@ export const GetUniveristy = async (req, res) => {
             select: "name ,-_id",
         }
     });
-    res.status(200).send(university);
+    var token = jwt.sign({name:'Adil' , surname :"Ibadov" , address:"Baku"}, "PrivateKey")
+    res.header("my-token",token).status(200).send(university);
 };
 
 export const GetUniversityById = async (req, res) => {

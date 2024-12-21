@@ -1,0 +1,30 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3001/student
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Adil",
+    "surname":"Ibadov",
+    "age":21,
+    "university":"675486c78bebe9e8c5871458",
+    "faculty":"675487658bebe9e8c5871462"
+  }
+}
+
+body:multipart-form {
+  name: Adil
+  surname: Ibadov
+  age: 21
+  university: 675486c78bebe9e8c5871458
+  faculty: 675486f38bebe9e8c587145d
+  avatar: @file(C:\Users\adili\Desktop\imgs\Furniture-pieces-that-blur-the-line-between-modern-traditional.jpg)
+}
